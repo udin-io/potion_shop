@@ -5,7 +5,7 @@ defmodule Carafe.MixProject do
     [
       app: :carafe,
       version: "0.1.0",
-      elixir: "~> 1.13",
+      elixir: "~> 1.15",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: Mix.compilers(),
       start_permanent: Mix.env() == :prod,
@@ -36,7 +36,7 @@ defmodule Carafe.MixProject do
       {:bcrypt_elixir, "~> 3.0"},
       {:phoenix, "~> 1.6.15"},
       {:phoenix_ecto, "~> 4.4"},
-      {:ecto_sql, "~> 3.6"},
+      {:ecto_sql, "~> 3.10"},
       {:postgrex, ">= 0.0.0"},
       {:phoenix_html, "~> 3.0"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
@@ -52,7 +52,8 @@ defmodule Carafe.MixProject do
       {:plug_cowboy, "~> 2.5"},
       {:tailwind, "~> 0.1.8", runtime: Mix.env() == :dev},
       {:paginator, "~> 0.6.0"},
-      {:sobelow, "~> 0.13", only: [:dev, :test], runtime: false}
+      {:sobelow, "~> 0.13", only: [:dev, :test], runtime: false},
+      {:mix_audit, "~> 2.1"}
     ]
   end
 
