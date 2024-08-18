@@ -1,4 +1,4 @@
-name: Cassbana CI
+name: Potion Shop CI
 on:
   pull_request:
     branches: ["main"]
@@ -57,3 +57,7 @@ jobs:
         env:
           MIX_ENV: test
           MIX_DB_HOSTNAME: localhost
+      - name: Install Sobelow
+        run: mix archive.install hex sobelow --force
+      - name: Run Sobelow
+        run: mix sobelow -v verbose
